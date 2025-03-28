@@ -6,7 +6,13 @@ const app = express();
 const PORT = process.env.PORT || 8080;
 
 // Middleware
-app.use(cors()); // Enable CORS for frontend communication
+// Enable CORS for your frontend domain
+app.use(cors({
+  origin: "https://trade-senal-mern-frontend.onrender.com", // Allow frontend
+  methods: "GET,POST,PUT,DELETE",
+  credentials: true, // Allow cookies if needed
+}));
+
 app.use(express.json()); // Parse incoming JSON data
 
 // Routes
