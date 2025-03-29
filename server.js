@@ -8,7 +8,7 @@ const PORT = process.env.PORT || 8080;
 // Middleware
 // Enable CORS for your frontend domain with proper headers
 const corsOptions = {
-  origin: "https://trade-senal-mern-frontend.onrender.com",
+  origin: "https://tradesenal.com",
   methods: "GET,POST,PUT,DELETE",
   allowedHeaders: "Content-Type,Authorization",
   credentials: true, // Allow cookies & authorization headers
